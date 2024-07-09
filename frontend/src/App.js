@@ -7,14 +7,14 @@ function App() {
   const [itens, setItens] = useState([])
   const [filterItens, setFilterItens] = useState({ filter: false, active: false })
 
-  function getData() {
-    fetch('http://localhost:3000/todo/list', { method: "GET" })
+  async function getData() {
+    await fetch('http://localhost:3000/todo/list', { method: "GET" })
       .then(response => response.json())
       .then(data => setItens(data))
   }
 
-  function insertDocuments() {
-    fetch('http://localhost:3000/todo/add',
+  async function insertDocuments() {
+    await fetch('http://localhost:3000/todo/add',
       {
         method: "POST",
         headers: { 'content-type': "application/json" },
@@ -24,8 +24,8 @@ function App() {
       .then(() => getData())
   }
 
-  function updateDocuments(item) {
-    fetch('http://localhost:3000/todo/update',
+  async function updateDocuments(item) {
+    await fetch('http://localhost:3000/todo/update',
       {
         method: "PATCH",
         headers: { 'content-type': "application/json" },
@@ -35,8 +35,8 @@ function App() {
       .then(() => getData())
   }
 
-  function deleteDocuments(item) {
-    fetch('http://localhost:3000/todo/delete',
+  async function deleteDocuments(item) {
+    await fetch('http://localhost:3000/todo/delete',
       {
         method: "DELETE",
         headers: { 'content-type': "application/json" },
