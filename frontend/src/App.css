@@ -1,0 +1,45 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.row{
+    background-color: #fff;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonRow{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonRow button{
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.button-to-do{
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.button-to-do:hover{
+    background-color: rgb(255, 80, 80);
+}
